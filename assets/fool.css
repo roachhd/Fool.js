@@ -50,6 +50,7 @@ a {
 	}
 	
 p {
+	clear: both;
 	padding-bottom: 20px;
 }
 

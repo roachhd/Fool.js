@@ -9,8 +9,8 @@
 		var prefixes = ['Webkit', 'Moz', 'Ms', 'O'],
 			obj = {};
 		
-		for(var doNotNeedThisVariable in prefixes) {
-			obj[prefixes + (prop.charAt(0).toUpperCase() + prop.substr(1))] = val;
+		for(var i in prefixes) {
+			obj[prefixes[i] + (prop.charAt(0).toUpperCase() + prop.substr(1))] = val;
 		}
 		
 		return this.css(obj);
@@ -24,7 +24,7 @@
 			rick = 'oHg5SJYRHA0',
 			
 			//  A list of the annoying videos
-			videos = ['Prhzzqc0aFQ', 'UwB9m4FslO4', 'LH5ay10RTGY', 'DkQ83yLqpJE', 'T6j4f8cHBIM', 'kffacxfA7G4', 'RFzyYYZsxGc', 'v20jRHL492Y', 'Z8bpeeuHDOA', 'KHy7DGLTt8g', '_6-KspZegsE', 'l12Csc_lW0Q'],
+			videos = ['v8CIDdKvUkg', 'UwB9m4FslO4', 'LH5ay10RTGY', 'DkQ83yLqpJE', 'T6j4f8cHBIM', 'kffacxfA7G4', 'RFzyYYZsxGc', 'v20jRHL492Y', 'Z8bpeeuHDOA', 'KHy7DGLTt8g', '_6-KspZegsE', 'l12Csc_lW0Q'],
 			
 			//  Baby, let's make our move
 			moves = {
@@ -39,7 +39,7 @@
 				
 				//  I've dropped a lot of pranks, but I'm never going to give you up.
 				rick: function() {
-					return moves.hiddenVideos(rick);
+					return moves.hiddenVideos.call(body, rick);
 				},
 				
 				//  Hide random elements on hover
